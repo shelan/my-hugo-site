@@ -1,0 +1,10 @@
+theme = "zen"
+baseurl = ""
+languageCode = "en-us"
+title = "Uncompiled Source Code"
+MetaDataFormat = "toml"
+paginate = 10
+
+[permalinks]
+	page = "/:title/"
+	about = "/:filename/"
