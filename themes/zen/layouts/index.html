@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 {{ partial "header.html" . }}
-<div class="container-fluid">
+<div class="row">
+
+   
+</div>
+</div>
+<div class="container">
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+  <div class="col-md-2"></div>
+    <div class="col-md-9">
       {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
       {{ range $paginator.Pages }}
       <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
@@ -17,4 +22,4 @@
       </div>
     </div>
   </div>
-{{ partial "footer.html" . }}
+  {{ partial "footer.html" . }}

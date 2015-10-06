@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | absURL }}">
     <link rel="stylesheet" href="{{ "/css/flat-ui.css" | absURL }}">
   </head>
-  <nav class="navbar navbar-embossed navbar-lg" role="navigation">
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Shelan Perera</a>
     </div>
-    <div class="collapse navbar-collapse" id="navbar-collapse-3">
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
       <ul class="nav navbar-nav">
         <li><a href="#">About Me</a></li>
-        <li><a href="#">Posts</a></li>
+        <li><a href="#">Posts</a></li>     
       </ul>
     </div>
+    <div class="row-fluid">
+  {{ with .Site.Params.gravatarHash }}<div class="col-md-2"><img src="https://www.gravatar.com/avatar/{{ . }}?s=100"  class="img-circle" alt="gravatar">{{ end }}</div>
+  </div>
   </nav>
+
   <body>
