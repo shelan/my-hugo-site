@@ -10,6 +10,10 @@ paginate = 10
 	post = "/blog/:year/:month/:day/:title/"
 	about = "/:filename/"
 
-[params]
+[taxonomies]
+    # Optional. Use if you want tags and lists.
+    category = "tech,life"
 
-gravatarHash = "9bef677be3cd588e6427102018d35f27"
+[params]
+	gravatarHash = "9bef677be3cd588e6427102018d35f27"
+	googleAnalytics = "UA-56325764-1"
