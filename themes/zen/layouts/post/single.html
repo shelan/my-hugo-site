@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <div class="container">
   <h3>{{ .Title }}</h3>
-  <h3>{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
+  <span class="text-info">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}</span>
   <p>{{ .Content }}</p>
 {{ partial "footer.html" . }}
 
