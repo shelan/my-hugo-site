@@ -3,6 +3,7 @@ baseurl = ""
 languageCode = "en-us"
 title = "Uncompiled Source Code"
 MetaDataFormat = "toml"
+disqusShortname = "shelanblog" 
 paginate = 10
 
 [permalinks]

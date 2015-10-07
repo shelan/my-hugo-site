@@ -12,16 +12,34 @@
   <nav class="navbar navbar-default navbar-embossed " role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Shelan Perera</a>
+      <a class="navbar-brand" href="/">Shelan Perera</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-4">
       <ul class="nav navbar-nav">
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Posts</a></li>     
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/post">Posts</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="http://facebook.com/" class="btn btn-social-icon btn-facebook">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="http://twitter.com/" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="http://www.linkedin.com/in/">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
     </div>
-    <div class="row-fluid">
+    <div class="row">
   {{ with .Site.Params.gravatarHash }}<div class="col-md-2"><img src="https://www.gravatar.com/avatar/{{ . }}?s=100"  class="img-circle" alt="gravatar">{{ end }}</div>
+  <div class="col-md-6"> <h2 class="tile"> Uncompiled Source Code</h2></div>
   </div>
   </nav>
 
