@@ -3,6 +3,7 @@ title = "Do we need to master memory in Google's Era ?"
 date = 2015-02-02T13:06:00Z
 updated = 2015-02-03T13:49:29Z
 tags = ["genius", "memory", "learning"]
+categories =["life"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

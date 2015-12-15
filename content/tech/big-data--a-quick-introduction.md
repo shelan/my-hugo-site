@@ -4,6 +4,7 @@ date = 2012-02-24T08:11:00Z
 updated = 2012-02-24T08:11:01Z
 tags = ["analytics", "data", "bigdata"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

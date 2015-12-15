@@ -4,6 +4,7 @@ date = 2014-10-11T13:52:00Z
 updated = 2014-10-13T06:33:04Z
 tags = ["Map Reduce", "Mac", "OS X", "Installation", "Hadoop", "Mavericks"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

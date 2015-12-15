@@ -3,6 +3,7 @@ title = "How to disable automatic service creation with WSDL upload"
 date = 2013-04-22T10:07:00Z
 updated = 2013-04-26T19:19:14Z
 tags = ["greg", "registry", "wsdl"]
+categories=["tech"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

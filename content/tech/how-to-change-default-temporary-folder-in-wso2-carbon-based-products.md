@@ -4,6 +4,7 @@ date = 2012-03-11T22:37:00Z
 updated = 2012-03-11T22:44:54Z
 tags = ["carbon", "wso2", "windows", "linux", "temp"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

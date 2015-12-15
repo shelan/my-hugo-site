@@ -4,6 +4,7 @@ date = 2011-12-23T05:16:00Z
 updated = 2012-02-19T05:55:50Z
 tags = ["programming", "tests", "testng", "java"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

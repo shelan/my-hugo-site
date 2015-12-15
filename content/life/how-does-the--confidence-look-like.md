@@ -3,6 +3,7 @@ title = "How does the  confidence look like?"
 date = 2015-03-30T12:13:00Z
 updated = 2015-03-30T12:22:57Z
 tags = ["confidence", "millionaire", "john", "carpenter"]
+categories =["life"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

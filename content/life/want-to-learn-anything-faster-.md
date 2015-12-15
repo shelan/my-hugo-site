@@ -4,6 +4,7 @@ date = 2014-09-19T17:27:00Z
 updated = 2014-09-19T18:10:42Z
 tags = ["new ways", "learning", "research", "learn", "kit", "scott young"]
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

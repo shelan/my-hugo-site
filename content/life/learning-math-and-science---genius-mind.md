@@ -3,6 +3,7 @@ title = "Learning Math and Science - Genius Mind"
 date = 2015-01-29T08:57:00Z
 updated = 2015-02-03T13:49:04Z
 tags = ["process", "memory", "productivity", "learning", "maths"]
+categories =["life"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

@@ -4,6 +4,7 @@ date = 2015-03-20T16:36:00Z
 updated = 2015-03-21T02:33:48Z
 tags = ["phone", "androd", "mobile", "tips", "lost"]
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

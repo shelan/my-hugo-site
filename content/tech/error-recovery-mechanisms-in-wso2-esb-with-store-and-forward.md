@@ -3,6 +3,7 @@ title = "Error Recovery Mechanisms in WSO2 ESB with Store and Forward"
 date = 2014-04-08T09:05:00Z
 updated = 2014-04-08T09:05:22Z
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

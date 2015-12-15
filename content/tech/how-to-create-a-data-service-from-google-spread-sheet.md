@@ -3,6 +3,7 @@ title = "How to create a Data service from Google Spread sheet"
 date = 2012-07-12T23:07:00Z
 updated = 2012-07-12T23:07:22Z
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

@@ -4,6 +4,7 @@ date = 2012-03-05T23:43:00Z
 updated = 2013-05-09T01:53:34Z
 tags = ["mysql", "wso2", "dss"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

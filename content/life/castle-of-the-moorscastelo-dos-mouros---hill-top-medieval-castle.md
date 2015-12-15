@@ -3,6 +3,7 @@ title = "Castle of the Moors(Castelo dos Mouros) - Hill top Medieval Castle"
 date = 2014-10-03T11:32:00Z
 updated = 2014-10-03T11:32:45Z
 tags = ["Castle of The Moors", "Trips", "Weekend", "Rossio", "Sintra", "EMDC", "lisbon", "Castle", "portugal"]
+categories =["life"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

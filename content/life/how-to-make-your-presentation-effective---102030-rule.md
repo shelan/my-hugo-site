@@ -3,6 +3,7 @@ title = "How to make your presentation effective - 10/20/30 rule"
 date = 2015-04-09T10:39:00Z
 updated = 2015-04-09T10:39:07Z
 tags = ["how to", "talk", "slides", "102030rule", "presentation"]
+categories =["life"]
 blogimport = true 
 [author]
 	name = "Shelan Perera"

@@ -4,6 +4,7 @@ date = 2014-11-09T14:50:00Z
 updated = 2014-11-09T14:50:28Z
 tags = ["how to", "Map Reduce", "debug", "Mac", "Hadoop", "intellijIdea"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

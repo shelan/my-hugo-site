@@ -4,6 +4,7 @@ date = 2014-10-25T02:35:00Z
 updated = 2014-11-02T22:47:15Z
 tags = ["OSX", "mysql", "mysqld", "Mac", "yosemite", "brew"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

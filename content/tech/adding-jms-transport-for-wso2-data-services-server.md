@@ -4,6 +4,7 @@ date = 2012-03-01T05:00:00Z
 updated = 2012-03-01T05:04:11Z
 tags = ["wso2", "jms", "dss", "dataservices", "activemq"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

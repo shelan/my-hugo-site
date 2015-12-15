@@ -4,6 +4,7 @@ date = 2015-04-02T02:33:00Z
 updated = 2015-04-02T02:34:08Z
 tags = ["paris", "metro", "travel"]
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

@@ -4,6 +4,7 @@ date = 2015-02-25T16:10:00Z
 updated = 2015-02-25T16:28:08Z
 tags = ["motivation", "les brown", "sucess", "inspiration", "winning"]
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

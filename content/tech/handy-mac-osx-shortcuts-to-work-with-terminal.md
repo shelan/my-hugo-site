@@ -4,6 +4,7 @@ date = 2014-11-11T08:27:00Z
 updated = 2014-11-11T08:28:24Z
 tags = ["how to", "terminal", "Mac", "shortcuts"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

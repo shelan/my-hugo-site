@@ -4,6 +4,7 @@ date = 2015-02-17T13:55:00Z
 updated = 2015-02-17T13:55:47Z
 tags = ["how to", "autoscaling", "Boto", "python", "cloud", "EC2", "automation"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

@@ -4,6 +4,7 @@ date = 2011-12-04T03:53:00Z
 updated = 2012-02-19T03:58:17Z
 tags = ["battery", "thinkpad", "lenovo", "linux", "thinkfan", "t520"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

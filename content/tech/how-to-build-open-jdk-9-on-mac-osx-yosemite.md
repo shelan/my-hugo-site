@@ -4,6 +4,7 @@ date = 2015-03-29T16:09:00Z
 updated = 2015-03-29T16:09:53Z
 tags = ["HOW", "OSX", "Build", "Mac", "OpenJDK", "OS X", "yosemite"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

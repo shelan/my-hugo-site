@@ -4,6 +4,7 @@ date = 2012-01-14T05:18:00Z
 updated = 2012-02-24T08:13:35Z
 tags = ["programming", "checkstyle", "Maven", "automation", "findbugs"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

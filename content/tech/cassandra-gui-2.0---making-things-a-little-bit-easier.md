@@ -4,6 +4,7 @@ date = 2012-06-18T23:37:00Z
 updated = 2014-10-31T15:31:24Z
 tags = ["data", "wso2", "bigdata", "gui", "cassandra", "explorer"]
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

@@ -3,6 +3,7 @@ title = "Create a proxy in WSO2 ESB using admin services."
 date = 2012-09-15T10:13:00Z
 updated = 2013-04-26T19:32:16Z
 blogimport = true 
+categories=["tech"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

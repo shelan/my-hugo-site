@@ -4,6 +4,7 @@ date = 2015-02-03T14:02:00Z
 updated = 2015-02-03T14:02:27Z
 tags = ["how to", "techniques", "genius", "memory", "jousua foer"]
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

@@ -3,6 +3,7 @@ title = "Hello World"
 date = 2011-12-01T03:50:00Z
 updated = 2012-02-19T03:51:38Z
 blogimport = true 
+categories =["life"]
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"

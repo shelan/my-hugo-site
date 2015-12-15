@@ -3,7 +3,8 @@ title = "How to send CDATA inside your SOAP message payload"
 date = 2013-03-26T22:07:00Z
 updated = 2013-07-18T09:45:17Z
 tags = ["cdata", "soap", "transformation"]
-blogimport = true 
+blogimport = true
+categories=["tech"] 
 [author]
 	name = "Shelan Perera"
 	uri = "https://plus.google.com/110975611609309023449"
