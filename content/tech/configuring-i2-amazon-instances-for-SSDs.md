@@ -1,15 +1,16 @@
 +++
 date = "2015-12-15T20:59:34+01:00"
 draft = false
-title = "configuring i2 amazon instances for SSDs"
-
+title = "Configuring i2 amazon instances for SSDs"
+categories=["tech"]
 +++
 
 If you are configuring Amazon instances for storage optimized workloads, You might want to use amazon i2 instances. They are backed by super fast SSDs than
 conventional hard drives therefore it is suitable for disk intensive workloads.
 
 if you issue the command
-``` df -h
+```
+df -h
 ```
 
 you may inspect current available disk storage and mounted paths.
@@ -23,20 +24,24 @@ To format and mount the disk you can follow the below steps.
 
 1) Examine available drives
 
-```sudo fdisk -l
+```
+sudo fdisk -l
 ```
 
 2) choose the drive you need to create a file system. (eg: if you choose xvdb and want to create ext3 file system for linux)
 
-```sudo mkfs.ext4 -E nodiscard /dev/xvdb
+```
+sudo mkfs.ext4 -E nodiscard /dev/xvdb
 ```
 
 3) You can now mount the disk to any folder path you need. In this you mount the formatted disk to /mnt/my-data
 
-```sudo mount -o discard /dev/xvdb /mnt/my-data
+```
+sudo mount -o discard /dev/xvdb /mnt/my-data
 ```
 
 Now you may
 
 If you need further details please refer following link.
+
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html#InstanceStoreTrimSupport

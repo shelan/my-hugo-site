@@ -6,10 +6,10 @@
       
       {{ range .Data.Pages }}
       <li><a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ if isset .Params "categories" }}
+     <!-- {{ if isset .Params "categories" }}
       &middot;
-      {{ range .Params.categories }}<a class="tag label label-info" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
-    {{ end }}</span>
+      {{ range .Params.categories }}<a class="tag label label-info" href="{{ "/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }} 
+    {{ end }}</span>-->
   &middot; <time>{{ .Date.Format "Jan 2, 2006" }}</time></li>
   {{ end }}
 </ul>

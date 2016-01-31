@@ -21,8 +21,20 @@
     {{ $paginator := .Paginate (.Data.Pages) }}
     {{ range $paginator.Pages }}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-    <span class="text-info">{{ .Date.Format "Jan 2, 2006" }}</span><span class="text-warning"> &middot; {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} </span>&middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}</span>
+    <span class="text-info">
+
+    {{ .Date.Format "Jan 2, 2006" }}</span><span class="text-info"> &middot; 
+
+
+{{ range .Params.categories }}<a class="tag label label-info" href="{{ "/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }} &middot; 
+
+    {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} </span>&middot; 
+
+    <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}</span>
     <p>{{ .Summary }}</p>
+
+ 
+
     <a href="{{ .Permalink }}">Read On &rarr;</a>
     {{ end }}
     <div>
