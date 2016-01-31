@@ -1,0 +1,101 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>How to get a user profile for OAuth Token using JWT headers &middot; </title>
+    
+    <link rel="stylesheet" href="http://shelan.org/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://shelan.org/css/flat-ui.css">
+    <link rel="stylesheet" href="http://shelan.org/css/highlight/monokai_sublime.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Shelan Perera</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+      <ul class="nav navbar-nav">
+        <li><a href="/tech">Tech Posts</a></li>
+        <li><a href="/life">Life</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="https://github.com/shelan">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/pub/shelan-perera/a/194/465" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="https://twitter.com/shelan">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+
+  <body>
+
+<div class="container">
+  <h3>How to get a user profile for OAuth Token using JWT headers</h3>
+  <span class="text-info">Jul 18, 2013 &middot; 2 minute read &middot; <a href="http://shelan.org/blog/2013/07/18/how-to-get-a-user-profile-for-oauth-token-using-jwt-headers/#disqus_thread">Comments</a>
+    </span>
+  <p><div dir="ltr" style="text-align: left;" trbidi="on"><span id="docs-internal-guid-303339eb-f296-f7f6-1b88-261a9c9bb1ba"></span><br /><div dir="ltr" style="font-size: 15px; line-height: 17px; margin-bottom: 0pt; margin-top: 0pt; white-space: pre-wrap;"><span style="font-family: Arial;">In this blog post lets discuss how you can retrieve user profile and view attributes of a user using only the OAuth token in WSO2 Identity server. I assume that reader is familiar with WSO2 identity server and if you need more help you can follow the documentation at </span><a href="http://docs.wso2.org/wiki/display/IS400/WSO2+Identity+Server+Documentation">http://docs.wso2.org/wiki/display/IS400/WSO2+Identity+Server+Documentation</a></div><div dir="ltr" style="font-size: 15px; line-height: 17px; margin-bottom: 0pt; margin-top: 0pt; white-space: pre-wrap;"><span style="font-family: Arial;"><br /></span></div><div dir="ltr" style="margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: Arial; font-size: 15px; line-height: 17px; white-space: pre-wrap;">1) </span><span style="font-family: Arial; font-size: 15px; line-height: 17px; white-space: pre-wrap;">Change the CARBON_HOME/repository/conf/identity.xml and make following attribute true. Then start the WSO2 Identity server.</span></div><div dir="ltr" style="margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"><pre><code><br />   &lt;AuthorizationContextTokenGeneration&gt;<br />                        <span style="background-color: yellow;">&lt;Enabled&gt;true&lt;/Enabled&gt;</span><br />                        &lt;TokenGeneratorImplClass&gt;org.wso2.carbon.identity.oauth2.authcontext.JWTTokenGenerator&lt;/TokenGeneratorImplClass&gt;<br />                        &lt;ClaimsRetrieverImplClass&gt;org.wso2.carbon.identity.oauth2.authcontext.DefaultClaimsRetriever&lt;/ClaimsRetrieverImplClass&gt;<br />                        &lt;ConsumerDialectURI&gt;http://wso2.org/claims&lt;/ConsumerDialectURI&gt;<br />                        &lt;SignatureAlgorithm&gt;SHA256withRSA&lt;/SignatureAlgorithm&gt;<br />                        &lt;AuthorizationContextTTL&gt;15&lt;/AuthorizationContextTTL&gt;<br />                &lt;/AuthorizationContextTokenGeneration&gt;</code></pre></span></span></div><div dir="ltr" style="margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"><br /></span></span></div><div dir="ltr" style="margin-bottom: 0pt; margin-top: 0pt;"><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;">2) Get the oauth Token ( you need to get the base64 encoded value for (client id:client secret) value.</span></span><br /><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"><br /></span></span><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-qgT8Mb3VI6c/UegaNml8a1I/AAAAAAAAB4Q/1Ujduv3UJ3A/s1600/oauth-secrets.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="401" src="http://4.bp.blogspot.com/-qgT8Mb3VI6c/UegaNml8a1I/AAAAAAAAB4Q/1Ujduv3UJ3A/s640/oauth-secrets.png" width="640" /></a></div><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"> You can use an online service for encoding such as http://www.base64encode.org/  and then issue following CURL command to obtain the access token. (make sure you have the correct port in the server URL) <pre><code><br />curl -v -X POST -H "Authorization: Basic VE01enNFem9FZG9NRERjVEJjbXRBcWJGdTBFYTpYUU9URExINlBBOHJvUHJfSktrTHhUSTNseGNh" -H "Content-Type: application/x-www-form-urlencoded;charset=UTF-8" -k -d "grant_type=password&amp;username=admin&amp;password=admin" https://localhost:9443/oauth2endpoints/token</code></pre></span></span><br /><br /><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"><code><br /></code>&nbsp;3)  Now you need to invoke and admin service in the Identity server. Please follow </span></span><br /><a href="http://charithaka.blogspot.com/2013/06/invoking-wso2-carbon-admin-services.html">http://charithaka.blogspot.com/2013/06/invoking-wso2-carbon-admin-services.html</a>&nbsp;on how to invoke admin services using SOAP UI.<br /><br />We shall now invoke the following service.<br /><b id="docs-internal-guid-303339eb-f2a4-0a03-ae04-2c05a8d65a0b" style="font-weight: normal;"><a href="https://localhost:9443/services/OAuth2TokenValidationService" style="text-decoration: none;"><span style="color: #1155cc; font-family: Arial; font-size: 15px; text-decoration: underline; vertical-align: baseline; white-space: pre-wrap;">https://localhost:9443/services/OAuth2TokenValidationService</span></a><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"> </span></b><br /><b style="font-weight: normal;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;"><br /></span></b><b style="font-weight: normal;"><span style="font-family: Arial; font-size: 15px; vertical-align: baseline; white-space: pre-wrap;">Request</span></b></div><div><span style="font-family: Arial;"><span style="font-size: 15px; line-height: 17px; white-space: pre-wrap;"><br /></span></span></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-jAcoq-QpVi4/UegaYJATVQI/AAAAAAAAB4Y/i2DCVjg-pTg/s1600/request.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="414" src="http://2.bp.blogspot.com/-jAcoq-QpVi4/UegaYJATVQI/AAAAAAAAB4Y/i2DCVjg-pTg/s640/request.png" width="640" /></a></div><br /><div><br />Response<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-0yUSY1daims/UegaiIs7cUI/AAAAAAAAB4g/bFBfYIQY3c0/s1600/response.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="270" src="http://4.bp.blogspot.com/-0yUSY1daims/UegaiIs7cUI/AAAAAAAAB4g/bFBfYIQY3c0/s640/response.png" width="640" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">Now you will be getting the authorization context token which is encoded in base64 and delimited with "." values. Middle part will contain the user profile value and we can get it decoded using&nbsp;<a href="http://www.base64decode.org/">http://www.base64decode.org/</a></div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;"></div><div class="separator" style="clear: both;">&lt;ax2303:tokenString&gt;eyJ0eXAiOiJKV1QiLCJhbGciOiJTSEEyNTZ3aXRoUlNBIiwieDV0IjoiTm1KbU9HVXhNelpsWWpNMlpEUmhOVFpsWVRBMVl6ZGhaVFJpT1dFME5XSTJNMkptT1RjMVpBPT0ifQ==.<span style="background-color: yellow;">eyJpc3MiOiJodHRwOi8vd3NvMi5vcmcvZ2F0ZXdheSIsImV4cCI6MTM3NDE2NDYzMDE4MiwiaHR0cDovL3dzbzIub3JnL2dhdGV3YXkvc3Vic2NyaWJlciI6ImFkbWluIiwiaHR0cDovL3dzbzIub3JnL2dhdGV3YXkvYXBwbGljYXRpb25uYW1lIjoiTXlBcHBsaWNhdGlvbiIsImh0dHA6Ly93c28yLm9yZy9nYXRld2F5L2VuZHVzZXIiOiJhZG1pbiIsICJodHRwOi8vd3NvMi5vcmcvY2xhaW1zL2FjY291bnRMb2NrIjoiZmFsc2UiLCAiaHR0cDovL3dzbzIub3JnL2NsYWltcy9jaGFsbGVuZ2VRdWVzdGlvbjEiOiIxMjM0NDUiLCAiaHR0cDovL3dzbzIub3JnL2NsYWltcy9jaGFsbGVuZ2VRdWVzdGlvbjIiOiI0NTY3NTYiLCAiaHR0cDovL3dzbzIub3JnL2NsYWltcy9jaGFsbGVuZ2VRdWVzdGlvblVyaXMiOiJteVRva2VuMiIsICJodHRwOi8vd3NvMi5vcmcvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluQHdzbzIuY29tIiwgImh0dHA6Ly93c28yLm9yZy9jbGFpbXMvZnVsbG5hbWUiOiJhZG1pbiIsICJodHRwOi8vd3NvMi5vcmcvY2xhaW1zL2dpdmVubmFtZSI6ImFkbWluIiwgImh0dHA6Ly93c28yLm9yZy9jbGFpbXMvbGFzdG5hbWUiOiJhZG1pbiIsICJodHRwOi8vd3NvMi5vcmcvY2xhaW1zL3JvbGUiOiJhZG1pbixldmVyeW9uZSJ9</span>.IUpGsH149iJDcn/UWYdGBrAoTNOZiUdI3X7QMXqVt+ss5rOOlDeB5bgz0Q3Y4SKh+H4PBkvlLd0/WAlbuvTi9Zj/G/QupenQpqYKulOFihUMNHiWRUgFT5BvfATVMsvqO/023BFprhdDShuPlpI9pJAEeuvmUiRIBPVVeoj09Ec=&lt;/ax2303:tokenString&gt;</div><div class="separator" style="clear: both;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;ax2303:tokenType&gt;JWT&lt;/ax2303:tokenType&gt;</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">Following is the output of the decoded value which has the user profile details of the user who generated the OAuth access token.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-qB4ok8OLexs/UegbbUGsnwI/AAAAAAAAB4s/4QI44F86e0g/s1600/decoded-userprof.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="554" src="http://4.bp.blogspot.com/-qB4ok8OLexs/UegbbUGsnwI/AAAAAAAAB4s/4QI44F86e0g/s640/decoded-userprof.png" width="640" /></a></div><div class="separator" style="clear: both;"><br /></div><br /><br /></div></div>
+</p>
+</body>
+<footer class="panel-footer navbar-fixed-bottom">
+<div class="container">
+	<p class="text-muted">Copyright Shelan Perera @ 2015</p>
+</div>
+</footer>
+<script src="http://shelan.org/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/flat-ui.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-56325764-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</html>
+
+<div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "shelanblog";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "shelanblog";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Uncompiled Source Code &middot; </title>
+    
+    <link rel="stylesheet" href="http://shelan.org/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://shelan.org/css/flat-ui.css">
+    <link rel="stylesheet" href="http://shelan.org/css/highlight/monokai_sublime.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Shelan Perera</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+      <ul class="nav navbar-nav">
+        <li><a href="/tech">Tech Posts</a></li>
+        <li><a href="/life">Life</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="https://github.com/shelan">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/pub/shelan-perera/a/194/465" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="https://twitter.com/shelan">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+
+  <body>
+
+<div class="row">
+  
+</div>
+</div>
+<div class="container">
+
+<div class="jumbotron">
+<div class="col-md-4">
+  <img class=img-circle src="https://www.gravatar.com/avatar/9bef677be3cd588e6427102018d35f27?s=150" alt="gravatar">
+</div>
+    <h1>Hacking life</h1> 
+
+    <p>"You cannot connect the dots by looking forward"</p>
+  </div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    
+    
+    <h4><a href="http://shelan.org/blog/2012/03/11/how-to-change-default-temporary-folder-in-wso2-carbon-based-products/">How to change default temporary folder in WSO2 carbon based products</a></h4>
+    <span class="text-info">
+
+    Mar 11, 2012</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    1 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/03/11/how-to-change-default-temporary-folder-in-wso2-carbon-based-products/#disqus_thread">Comments</a></span>
+    <p>In wso2 carbon based products default temporary folder is {product_home}/tmp. &nbsp;If you need to change that location to a different location here is the way to do it. &nbsp;You can change the location by changing the locations in start up scripts. &nbsp;1) In Linux (/bin/wso2server.sh) change following parameter&rsquo;s location. &nbsp;-Djava.io.tmpdir=&ldquo;$CARBON_HOME/tmp&rdquo; &nbsp;2) In Windows (/bin/wso2server.bat) change the following parameter&rsquo;s location. &nbsp;-Djava.io.tmpdir=&ldquo;%CARBON_HOME%\tmp&rdquo;</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/03/11/how-to-change-default-temporary-folder-in-wso2-carbon-based-products/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2012/03/05/how-to-call-mysql-stored-procedures-from-wso2-data-services-server/">How to call MySQL stored procedures from WSO2 Data Services Server</a></h4>
+    <span class="text-info">
+
+    Mar 5, 2012</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    2 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/03/05/how-to-call-mysql-stored-procedures-from-wso2-data-services-server/#disqus_thread">Comments</a></span>
+    <p>&nbsp;Stored procedures allows you to expose pre defined queries as an api allowing users to consume them in a much faster way. Requirements. MySQL Database server WSO2 Data Service Server (DSS) 2.6.3 MySQL JDBC driver Note: &lt;DSS_HOME&gt; is the root folder of your unpacked DSS server. 1.) Unpack WSO2 DSS and drop MySQL JDBC driver in &lt;DSS_HOME&gt;/repository/componets/lib folder. 2) Start the server using the start script &lt;DSS_HOME&gt;/bin/wso2server.sh &nbsp;(In linux or wso2server.bat in windows) Prepare Database use following&nbsp;queries&nbsp;to generate a database with a stored procedure.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/03/05/how-to-call-mysql-stored-procedures-from-wso2-data-services-server/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2012/03/01/adding-jms-transport-for-wso2-data-services-server/">Adding JMS transport for WSO2 Data Services Server</a></h4>
+    <span class="text-info">
+
+    Mar 1, 2012</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    1 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/03/01/adding-jms-transport-for-wso2-data-services-server/#disqus_thread">Comments</a></span>
+    <p>Pre requisites 1) WSO2 DataServices Server&nbsp;2) Apache ActiveMQ&nbsp; 1) Configuring JMS transport.After extracting Data Services Binary navigate to {DSS-HOME}/repository/confOpen axis2.xml in your editorUncomment the following sectionfor Transport Listner &lt;!--Uncomment this and configure as appropriate for JMS transport support, after setting up your JMS environment (e.g. ActiveMQ)--&gt; &lt;transportReceiver name="jms" class="org.apache.axis2.transport.jms.JMSListener"&gt; &lt;parameter name="myTopicConnectionFactory" locked="false"&gt; &lt;parameter name="java.naming.factory.initial" locked="false"&gt;org.apache.activemq.jndi.ActiveMQInitialContextFactory&lt;/parameter&gt; &lt;parameter name="java.naming.provider.url" locked="false"&gt;tcp://localhost:61616&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryJNDIName" locked="false"&gt;TopicConnectionFactory&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryType" locked="false"&gt;topic&lt;/parameter&gt; &lt;/parameter&gt; &lt;parameter name="myQueueConnectionFactory" locked="false"&gt; &lt;parameter name="java.naming.factory.initial" locked="false"&gt;org.apache.activemq.jndi.ActiveMQInitialContextFactory&lt;/parameter&gt; &lt;parameter name="java.naming.provider.url" locked="false"&gt;tcp://localhost:61616&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryJNDIName" locked="false"&gt;QueueConnectionFactory&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryType" locked="false"&gt;queue&lt;/parameter&gt; &lt;/parameter&gt; &lt;parameter name="default" locked="false"&gt; &lt;parameter name="java.naming.factory.initial" locked="false"&gt;org.apache.activemq.jndi.ActiveMQInitialContextFactory&lt;/parameter&gt; &lt;parameter name="java.naming.provider.url" locked="false"&gt;tcp://localhost:61616&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryJNDIName" locked="false"&gt;QueueConnectionFactory&lt;/parameter&gt; &lt;parameter name="transport.jms.ConnectionFactoryType" locked="false"&gt;queue&lt;/parameter&gt; &lt;/parameter&gt; &lt;/transportReceiver&gt;For Transport Sender &lt;!-- uncomment this and configure to use connection pools for sending messages--&gt; &lt;transportSender name="jms" class="org.apache.axis2.transport.jms.JMSSender"/&gt;Add the required jars to &lt;DSS_HOME&gt;/repository/components/lib folder.&nbsp;Start ActiveMQ using command "sh &lt;ActiveMQ_HOME&gt;/bin/activemq start" You can explore your ActiveMQ queues for services using JConsole.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/03/01/adding-jms-transport-for-wso2-data-services-server/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2012/02/24/big-data--a-quick-introduction/">Big Data : A Quick introduction</a></h4>
+    <span class="text-info">
+
+    Feb 24, 2012</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    2 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/02/24/big-data--a-quick-introduction/#disqus_thread">Comments</a></span>
+    <p>What is Big data? This is one of the buzz words in today's world and has gained the attention of many industries. By looking at the name one might think it as data in "BIG" format. But there is much more than that. Today the rate of data generation is so huge and there are several&nbsp;dimensions&nbsp;that data evolves. Big data spans three dimensions: Volume, Velocity and Variety. " Volume – Big data comes in one size: large.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/02/24/big-data--a-quick-introduction/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2012/02/19/how-to-kill-a-process-running-on-a-known-port/">How to kill a process running on a known port</a></h4>
+    <span class="text-info">
+
+    Feb 19, 2012</span><span class="text-info"> &middot; 
+
+
+ &middot; 
+
+    1 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/02/19/how-to-kill-a-process-running-on-a-known-port/#disqus_thread">Comments</a></span>
+    <p>If you know a process running on a specific port and need to kill the process ?here are the steps.1) Find the process ID. (Here which runs on 9443)?12345fuser -n tcp 9443orlsof -w -n -i tcp:9443Then you have the process ID. Kill the process with (Here ID =&nbsp;6147)?1kill -9 6147</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/02/19/how-to-kill-a-process-running-on-a-known-port/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2012/01/14/how-to-add-findbugs-and-checkstyle-plugins-to-your-maven3-build/">How to add Findbugs and Checkstyle plugins to your maven3 build</a></h4>
+    <span class="text-info">
+
+    Jan 14, 2012</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    2 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2012/01/14/how-to-add-findbugs-and-checkstyle-plugins-to-your-maven3-build/#disqus_thread">Comments</a></span>
+    <p>Findbugs and Checkstyle are two awesome tools that help to maintain the quality of your code discovering anti patterns or bad smells.Normally we can run those two tools with the help of IDE but there are possibilities that developers may be ignorant about them.So how about adding them to the normal maven build so developers are forced to correct their mistakes. There are different level of&nbsp;sympathetic&nbsp;levels that you can have&nbsp;&nbsp;with this integration.You can break the build if you find any Findbug&nbsp;violations&nbsp;and use SVN blame to find who broke the build&nbsp;&nbsp;.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2012/01/14/how-to-add-findbugs-and-checkstyle-plugins-to-your-maven3-build/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2011/12/23/better-testing-with-testng/">Better testing with Testng</a></h4>
+    <span class="text-info">
+
+    Dec 23, 2011</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    3 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2011/12/23/better-testing-with-testng/#disqus_thread">Comments</a></span>
+    <p>Most of the programmers busy with&nbsp;writing&nbsp;code and forget the&nbsp;importance&nbsp;of having tested&nbsp;the implementations then and there.When you start writing tests you should select the best suitable framework for your job or else you will make things worse. There are few different tests such asUnit test&nbsp;: You have a clear narrow and well defined scope to check a single point of large story/ contractIntegration test&nbsp;: In this you will be checking inter operation with more than one sub systems and may expand across system&nbsp;boundaries.Smoke test/ sanity tests: This is a basic integration test for a product to verify system perform its basic&nbsp;functionality as expectedRegression test&nbsp;: Test to verify a fixed bug is actually fixed and it will not encounter againAcceptance test&nbsp;: This is also a form of integration test which carried out to verify a&nbsp;use case&nbsp;or a user storyOut of these tests JUnit is adequate to perform Unit tests but for integration tests it has some limitations.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2011/12/23/better-testing-with-testng/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2011/12/04/tweaks-for-your-thinkpad-with-linux/">Tweaks for your Thinkpad with Linux</a></h4>
+    <span class="text-info">
+
+    Dec 4, 2011</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/tech">tech</a> &middot; 
+
+    3 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2011/12/04/tweaks-for-your-thinkpad-with-linux/#disqus_thread">Comments</a></span>
+    <p>I got a thinkpad T520 recently which i would say really cool due to its form factor and also due to some “serious” configuration it had out of box&nbsp;&nbsp;.But if you happened to install a Linux distro things would not be smooth.There are less problems if you use a recent distro which has the knowledge of what “Sandybridge” is capable of [1].I am using LinuxMint 12 so these tweaks valid for Ubuntu 11.10 as well (and 11.04 too.)&nbsp;Reducing the power consumptionThere has been a problem with the excess power usage which resulted eating the juice in your battery hungrily.Following steps were referred from the links [2][3] and tested&nbsp;successfully&nbsp;in my laptop.Install powertop to view how much power your laptop consume.It will show the power consumption when you are running on battery.sudo apt-get install powertop1.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2011/12/04/tweaks-for-your-thinkpad-with-linux/">Read On &rarr;</a>
+    
+    <h4><a href="http://shelan.org/blog/2011/12/01/hello-world/">Hello World</a></h4>
+    <span class="text-info">
+
+    Dec 1, 2011</span><span class="text-info"> &middot; 
+
+
+<a class="tag label label-info" href="http://shelan.org/life">life</a> &middot; 
+
+    1 minute read </span>&middot; 
+
+    <a href="http://shelan.org/blog/2011/12/01/hello-world/#disqus_thread">Comments</a></span>
+    <p>Hi all,I am starting fresh this blog b’cos i am entering a new phase of my life.I have been learning theories for last 24 years a lot.Now it is high time to make some useful things out of it.Life is all about choices.I had to made a couple of them.This is my first weekend after the first two days of my Job @ WSO2.No doubt it is one of the best decisions i made in my life to choose WSO2 as my internship company.Since then the way of learning change drastically.I met lots of people.I specially thank Dr.Srinath Perera who played different roles in my life as a mentor and supervisor.There are lots of promising things coming up in my life.New technologies, new processes to learn and adopt which i mostly welcome to my life to embrace new&nbsp;challenges.I am sure this blog will be the public “source code” of my life.If you believe if there is something useful please adopt, modify and redistribute.</p>
+
+ 
+
+    <a href="http://shelan.org/blog/2011/12/01/hello-world/">Read On &rarr;</a>
+    
+    <div>
+    </div>
+    <div class="pagination">
+      
+    
+    <ul class="pagination">
+        
+        <li>
+            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        
+        <li
+        >
+        <a href="/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        
+        <li
+        ><a href="/">1</a></li>
+        
+        <li
+        ><a href="/page/2/">2</a></li>
+        
+        <li
+        ><a href="/page/3/">3</a></li>
+        
+        <li
+        class="active"><a href="/page/4/">4</a></li>
+        
+        <li
+        class="disabled">
+        <a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        
+        <li>
+            <a href="/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+        
+    </ul>
+    
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var disqus_shortname = "shelanblog";
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+</body>
+<footer class="panel-footer navbar-fixed-bottom">
+<div class="container">
+	<p class="text-muted">Copyright Shelan Perera @ 2015</p>
+</div>
+</footer>
+<script src="http://shelan.org/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/flat-ui.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-56325764-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</html>

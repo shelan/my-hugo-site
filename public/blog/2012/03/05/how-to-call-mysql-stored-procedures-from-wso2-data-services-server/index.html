@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>How to call MySQL stored procedures from WSO2 Data Services Server &middot; </title>
+    
+    <link rel="stylesheet" href="http://shelan.org/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://shelan.org/css/flat-ui.css">
+    <link rel="stylesheet" href="http://shelan.org/css/highlight/monokai_sublime.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Shelan Perera</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+      <ul class="nav navbar-nav">
+        <li><a href="/tech">Tech Posts</a></li>
+        <li><a href="/life">Life</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="https://github.com/shelan">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/pub/shelan-perera/a/194/465" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="https://twitter.com/shelan">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+
+  <body>
+
+<div class="container">
+  <h3>How to call MySQL stored procedures from WSO2 Data Services Server</h3>
+  <span class="text-info">Mar 5, 2012 &middot; 2 minute read &middot; <a href="http://shelan.org/blog/2012/03/05/how-to-call-mysql-stored-procedures-from-wso2-data-services-server/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="tag" href="http://shelan.org/categories/tech">tech</a>
+    </span>
+  <p><div dir="ltr" style="text-align: left;" trbidi="on"><div dir="ltr" style="text-align: left;" trbidi="on">&nbsp;Stored procedures allows you to expose pre defined queries as an api allowing users to consume them in a much faster way.<br /><br /><b>Requirements.</b><br /><br /><a href="http://www.mysql.com/downloads/" target="_blank">MySQL Database server</a><br /><a href="http://wso2.org/downloads/dss/" target="_blank">WSO2 Data Service Server (DSS) 2.6.3</a><br /><a href="http://www.mysql.com/downloads/connector/j/" target="_blank">MySQL JDBC driver</a><br /><br />Note: &lt;DSS_HOME&gt; is the root folder of your unpacked DSS server.<br /><br />1.) Unpack WSO2 DSS and drop MySQL JDBC driver in &lt;DSS_HOME&gt;/repository/componets/lib folder.<br />2) Start the server using the start script &lt;DSS_HOME&gt;/bin/wso2server.sh &nbsp;(In linux or wso2server.bat in windows)<br /><br /><b>Prepare Database</b><br /><b><br /></b>use following&nbsp;queries&nbsp;to generate a database with a stored procedure. [1]<br /><br /><br /></div><pre><code>DROP DATABASE IF EXISTS DATASERVICE_SAMPLE;<br />CREATE DATABASE DATASERVICE_SAMPLE;<br />GRANT ALL ON DATASERVICE_SAMPLE.* TO 'dsuser'@'localhost' IDENTIFIED BY 'user123';<br /><br />USE DATASERVICE_SAMPLE;<br /><br />DROP TABLE IF EXISTS Employees;<br /><br />CREATE TABLE Employees(<br />        employeeNumber INTEGER,<br />        lastName VARCHAR(50),<br />        firstName VARCHAR(50),<br />        extension VARCHAR(10),<br />        email VARCHAR(100),<br />        officeCode VARCHAR(10),<br />        reportsTo INTEGER,<br />        jobTitle VARCHAR(50) <br />);<br /><br /><br />insert into Employees values (1002,'Murphy','Diane','x5800','dmurphy@classicmodelcars.com','1',null,'President');<br />insert into Employees values (1056,'Patterson','Mary','x4611','mpatterso@classicmodelcars.com','1',1002,'VP Sales');<br />insert into Employees values (1076,'Firrelli','Jeff','x9273','jfirrelli@classicmodelcars.com','1',1002,'VP Marketing');<br />insert into Employees values (1088,'Patterson','William','x4871','wpatterson@classicmodelcars.com','6',1056,'Sales Manager (APAC)');<br />insert into Employees values (1102,'Bondur','Gerard','x5408','gbondur@classicmodelcars.com','4',1056,'Sale Manager (EMEA)');<br />insert into Employees values (1143,'Bow','Anthony','x5428','abow@classicmodelcars.com','1',1056,'Sales Manager (NA)');<br />insert into Employees values (1165,'Jennings','Leslie','x3291','ljennings@classicmodelcars.com','1',1143,'Sales Rep');<br /><br />DROP PROCEDURE If EXISTS getEmployee;<br />CREATE PROCEDURE getEmployee(empNo INTEGER) SELECT employeeNumber,lastName,firstName,email FROM Employees where employeeNumber = empNo;<br /></code></pre><b>&nbsp;Create Data Service.</b><br /><div><b><br /></b></div><div>1) click on DataService -----&gt; Create</div><div><br /></div><div>2) Add new Data Source.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-bWJeje9EPrs/T1W9VhFX-5I/AAAAAAAAAr8/kgUm8loUbPI/s1600/datasource.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="276" src="http://4.bp.blogspot.com/-bWJeje9EPrs/T1W9VhFX-5I/AAAAAAAAAr8/kgUm8loUbPI/s640/datasource.png" width="640" /></a></div><div><br /></div><div><br /><div><br /></div><div>3) Click next and Add new Query.</div></div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-yAQFie2H-_s/T1W9wmJ2yDI/AAAAAAAAAsE/z4BNaAvwqD4/s1600/sql-query.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="276" src="http://3.bp.blogspot.com/-yAQFie2H-_s/T1W9wmJ2yDI/AAAAAAAAAsE/z4BNaAvwqD4/s640/sql-query.png" width="640" /></a></div><div><br /></div><div>Here ? denotes the parameter required for the SQL query.</div><div><br /></div><div>4) Add input parameter mapping&nbsp;</div><div><br /></div><div>Since we need to have an input parameter for the&nbsp;Data Service&nbsp;lets define it.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-ya1p4CEmPnk/T1W-HIg9vyI/AAAAAAAAAsM/JBWUpiffVtE/s1600/input-mapping.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="456" src="http://2.bp.blogspot.com/-ya1p4CEmPnk/T1W-HIg9vyI/AAAAAAAAAsM/JBWUpiffVtE/s640/input-mapping.png" width="640" /></a></div><div><br /></div><div>5) Add output Mapping.</div><div><br /></div><div>There are elements in the output result we need to map. There are four output Mappings we need to define and i following&nbsp;screenshot&nbsp;shows adding one of them.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-0y8fNVFv7TA/T1W-Xk5wApI/AAAAAAAAAsU/r6UxZqwvbYo/s1600/output-mapping.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="512" src="http://1.bp.blogspot.com/-0y8fNVFv7TA/T1W-Xk5wApI/AAAAAAAAAsU/r6UxZqwvbYo/s640/output-mapping.png" width="640" /></a></div><div><br /></div><div>After adding all of them, Here how it looks like.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-HF2nWkygvrQ/T1W-ynTwXzI/AAAAAAAAAsc/68YJr6cywVQ/s1600/input-output.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="274" src="http://1.bp.blogspot.com/-HF2nWkygvrQ/T1W-ynTwXzI/AAAAAAAAAsc/68YJr6cywVQ/s640/input-output.png" width="640" /></a></div><div><br /></div><div>6) Click save and go to next page to add new operation. Click on "Add query params as operation params" to add input parameters for operation.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-DuMrf1SBtiU/T1W_RJMdo1I/AAAAAAAAAsk/-K5G7ks_TFk/s1600/add-operation.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="418" src="http://1.bp.blogspot.com/-DuMrf1SBtiU/T1W_RJMdo1I/AAAAAAAAAsk/-K5G7ks_TFk/s640/add-operation.png" width="640" /></a></div><div><br /></div><div>7) Click save and then click finish to deploy the Data Service. After few seconds refresh the&nbsp;web services&nbsp;list to view newly added Data Service.</div><div><br /></div><div>8) Click on "Try this Service" to test the service. And then test your StoredProcedure exposed as a data service through WSO2 Data Services Server.</div><div><br /></div><div>(here i have used 1002 as the employeeNo)</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-NkNMbw9wzos/T1W_8CFh11I/AAAAAAAAAss/1txLI0pSKIM/s1600/try-it.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="394" src="http://3.bp.blogspot.com/-NkNMbw9wzos/T1W_8CFh11I/AAAAAAAAAss/1txLI0pSKIM/s640/try-it.png" width="640" /></a></div><div><br /></div><div><br /></div><div>References.<br /><br />[1]&nbsp;<a href="http://wso2.org/blog/sumedha/2623">http://wso2.org/blog/sumedha/2623</a><br /><br />[2]&nbsp;<a href="http://charithaka.blogspot.com/2010/09/how-to-call-oracle-stored-procedures.html">http://charithaka.blogspot.com/2010/09/how-to-call-oracle-stored-procedures.html</a></div><div><br /></div></div>
+</p>
+</body>
+<footer class="panel-footer navbar-fixed-bottom">
+<div class="container">
+	<p class="text-muted">Copyright Shelan Perera @ 2015</p>
+</div>
+</footer>
+<script src="http://shelan.org/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/flat-ui.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-56325764-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</html>
+
+<div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "shelanblog";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "shelanblog";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>

@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Cassandra GUI 2.0 - Making things a little bit easier &middot; </title>
+    
+    <link rel="stylesheet" href="http://shelan.org/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://shelan.org/css/flat-ui.css">
+    <link rel="stylesheet" href="http://shelan.org/css/highlight/monokai_sublime.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Shelan Perera</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+      <ul class="nav navbar-nav">
+        <li><a href="/tech">Tech Posts</a></li>
+        <li><a href="/life">Life</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="https://github.com/shelan">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/pub/shelan-perera/a/194/465" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="https://twitter.com/shelan">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+
+  <body>
+
+<div class="container">
+  <h3>Cassandra GUI 2.0 - Making things a little bit easier</h3>
+  <span class="text-info">Jun 18, 2012 &middot; 2 minute read &middot; <a href="http://shelan.org/blog/2012/06/18/cassandra-gui-2.0---making-things-a-little-bit-easier/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="tag" href="http://shelan.org/categories/tech">tech</a>
+    </span>
+  <p><div dir="ltr" style="text-align: left;" trbidi="on">Update (2014 October 31st)<br /><br />You can download WSO2 Storage server &nbsp;1.1.0 which ships Cassandra explorer and many interesting tools to manage storages. Please follow the following links for documentation to use Cassandra Explorer.<br /><br />Download the product<br /><a href="https://docs.wso2.com/display/SS110/Downloading+the+Product">https://docs.wso2.com/display/SS110/Downloading+the+Product</a><br /><br />Extract the binary and run the product. (See "Starting the server" after extracting )<br /><a href="https://docs.wso2.com/display/SS110/Running+the+Product">https://docs.wso2.com/display/SS110/Running+the+Product</a><br /><br />Documentation about Explorer<br /><a href="https://docs.wso2.com/display/SS110/Explore+Cassandra+Cluster">https://docs.wso2.com/display/SS110/Explore+Cassandra+Cluster</a><br /><br />========================================================================<br /><br />Cassandra GUI evolved from its first version and new version includes bug fixes and enhanced features.<br /><h3 style="text-align: left;"> New features.</h3><ul style="text-align: left;"><li><span style="background-color: white;">Complete pagination for Row view of explorer</span></li><li><span style="background-color: white;">Search rows by their names. (Filtered on the fly as you type.)</span></li><li><span style="background-color: white;">Filtering non displayable data and label them with warnings.</span></li></ul><h3 style="text-align: left;"> Bug Fixes</h3><div><ul style="text-align: left;"><li>Remote connection problem</li><li>Connect to Remote Cassandra server without restarting the server.</li></ul><h3 style="text-align: left;"> Start the Server</h3><div><a href="https://www.dropbox.com/s/ji3srheacuvgl6t/wso2carbon-4.0.0-SNAPSHOT.zip" style="background-color: #ffd966;" target="_blank">You can download the server here.</a></div></div><div><br /></div>Extract the downloaded product and lets refer extracted folder as CARBON_HOME.<br /><div><br /></div><div>go to CARBON_HOME/bin and run sh wso2server.sh (linux) or<br />wso2server.bat<br /><div><br /></div><div>Log in to the admin console using&nbsp;https://localhost:9443/</div><div>default user name and password : admin, admin</div><h3 style="text-align: left;"> Following&nbsp;screen shots include a quick flow on how it works.</h3><div><br /></div><div>1) Click connect to cluster on right hand side panel. Give connection URL and credentials (if there is any) to connect.</div><div><br /></div><div>eg: URL = localhost:9160, &nbsp;or &nbsp;10.100.3.234:</div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-SEqAQQRF6kc/T-ATyPv-BMI/AAAAAAAAA5k/ud1w2gP3Yf0/s1600/connect.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-SEqAQQRF6kc/T-ATyPv-BMI/AAAAAAAAA5k/ud1w2gP3Yf0/s640/connect.png" height="279" width="640" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div>2) After a&nbsp;Successful&nbsp;connection you will be directed to keyspace listing page. Which will include Keyspaces and clickable column family names. Click on a Column Family to Explore data.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-BeSNnEVE4Ng/T-AUQZeJ0WI/AAAAAAAAA5s/xp9zI2PncOQ/s1600/list-keyspaces.png" imageanchor="1" style="background-color: white; margin-left: 1em; margin-right: 1em; text-align: center;"><img border="0" src="http://4.bp.blogspot.com/-BeSNnEVE4Ng/T-AUQZeJ0WI/AAAAAAAAA5s/xp9zI2PncOQ/s640/list-keyspaces.png" height="414" width="640" /></a></div><div></div><div><br /></div><div><br /></div><div><br /></div><div>3) Row view Page.</div><div>After clicking the column family you have landed in the row view page. It includes rows of your column family and a slice of column data as a summary.</div><div><br /></div><div>You can&nbsp;search, paginate or change no of items to filter your data. Click "view more" to explore a single row.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-HRXwLnTC6W0/T-AVRtgda4I/AAAAAAAAA50/-Sm4_QKzRtA/s1600/row-explorer.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-HRXwLnTC6W0/T-AVRtgda4I/AAAAAAAAA50/-Sm4_QKzRtA/s640/row-explorer.png" height="286" width="640" /></a></div><div><br /></div><div><br /></div><div>4) Column family view page will list all the columns in a single row. You can filter the data with column name,value or&nbsp;time stamp. full numbered pagination is available.&nbsp;</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-eCvd6pOKe28/T-AWFrIfE5I/AAAAAAAAA58/R4fbj_Z9XVM/s1600/Screenshot+from+2012-06-19+11:11:41.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-eCvd6pOKe28/T-AWFrIfE5I/AAAAAAAAA58/R4fbj_Z9XVM/s640/Screenshot+from+2012-06-19+11:11:41.png" height="236" width="640" /></a></div><div><br /></div></div></div>
+</p>
+</body>
+<footer class="panel-footer navbar-fixed-bottom">
+<div class="container">
+	<p class="text-muted">Copyright Shelan Perera @ 2015</p>
+</div>
+</footer>
+<script src="http://shelan.org/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/flat-ui.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-56325764-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</html>
+
+<div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "shelanblog";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "shelanblog";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>

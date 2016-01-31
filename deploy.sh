@@ -5,6 +5,12 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 hugo -d dist # if using a theme, replace by `hugo -t <yourtheme>`
 
+# adding content to content backup repository.
+git add -A
+git commit -m "backing up site content `date`"
+git push origin master
+
+
 # Go To Public folder
 cp -r dist/* ./../shelan.github.io
 

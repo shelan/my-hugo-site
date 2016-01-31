@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Cassandra Explorer - GUI for Cassandra &middot; </title>
+    
+    <link rel="stylesheet" href="http://shelan.org/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://shelan.org/css/flat-ui.css">
+    <link rel="stylesheet" href="http://shelan.org/css/highlight/monokai_sublime.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head>
+  <nav class="navbar navbar-default navbar-embossed " role="navigation">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Shelan Perera</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-4">
+      <ul class="nav navbar-nav">
+        <li><a href="/tech">Tech Posts</a></li>
+        <li><a href="/life">Life</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+            <li>
+            <a href="https://github.com/shelan">
+                <i class="fui-github"></i>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.linkedin.com/pub/shelan-perera/a/194/465" class="btn btn-social-icon btn-twitter">
+                <i class="fui-linkedin"></i>
+            </a>
+            </li>
+                            <li>
+            <a href="https://twitter.com/shelan">
+                <i class="fa fui-twitter"></i>
+            </a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+
+  <body>
+
+<div class="container">
+  <h3>Cassandra Explorer - GUI for Cassandra</h3>
+  <span class="text-info">May 12, 2012 &middot; 2 minute read &middot; <a href="http://shelan.org/blog/2012/05/12/cassandra-explorer---gui-for-cassandra/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="tag" href="http://shelan.org/categories/tech">tech</a>
+    </span>
+  <p><div dir="ltr" style="text-align: left;" trbidi="on"><h2 style="text-align: left;"><span style="background-color: yellow;">Please go to following url for the newest version.</span><span style="background-color: yellow;"><br /></span><a href="http://blog.shelan.org/2012/06/cassandra-gui-20-making-things-little.html" style="background-color: yellow;">http://blog.shelan.org/2012/06/cassandra-gui-20-making-things-little.html</a></h2><br />WSO2 products can manage a Cassandra Cluster using Cassandra feature.<a href="http://wso2.org/library/knowledge-base/2012/04/deploy-cassandra-feature-wso2-carbon-product" target="_blank">[1]</a>&nbsp;&nbsp;(No need to follow the instructions to setup cassandra I have added a pre installed version&nbsp;<a href="https://www.dropbox.com/s/m00uodj1ymkpdzb/wso2carbon-4.0.0-SNAPSHOT.zip" target="_blank">[2]</a>)<br />If you have a Cassandra cluster i am sure you have the problem of viewing the data instantly. Cassandra CLI is one of the tools but it would be easier if it has a nice UI and would more convenient for administrators. Cassandra Explore has been developed to make the things easier for Cassandra users.<br /><br />Download the Cassandra Feature pre installed WSO2 Carbon Server. <a href="https://www.dropbox.com/s/m00uodj1ymkpdzb/wso2carbon-4.0.0-SNAPSHOT.zip" target="_blank">[2]</a> . (Until we officially release Cassandra Explorer with Cassandra feature lets use this.)<br /><br />Extract the downloaded product and lets refer extracted folder as&nbsp;CARBON_HOME.<br /><br />You have two different options with Cassandra feature.<br /><br />1. Use internal Cassandra Server .<br /><br />In this it will start internal Cassandra Server and you can use it to store data.<br /><br />2. User&nbsp;External&nbsp;Cassandra Cluster.<br /><br />This option if you already have setup your Cassandra Cluster and you need to view data. You need to<br />add your Cassandra Clusters details in&nbsp;CARBON_HOME/repository/conf/etc/cassandra-component.xml<br /><br /><h3 style="text-align: left;">     Starting Carbon Server</h3><div>1) If you need to use internal server. go to CARBON_HOME/bin and run sh wso2server.sh (linux) or</div><div>wso2server.bat</div><div><br /></div><div>&nbsp;If you need to connect to an external cassandra cluster you need to run same wso2server.sh with following parameter<br /><br /></div>sh wso2server.sh -Ddisable.cassandra.server.startup=true<br /><div><br /></div><div>and log in with default username and password (admin, admin)</div><h3 style="text-align: left;">     List Key Spaces.</h3><div>Click Cassandra Keyspaces ---&gt; List to list down keyspaces.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-L6UWdAtqd_4/T64b3-SYOzI/AAAAAAAAA20/KUnTQLTbSFs/s1600/list-keyspaces.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="275" src="http://4.bp.blogspot.com/-L6UWdAtqd_4/T64b3-SYOzI/AAAAAAAAA20/KUnTQLTbSFs/s640/list-keyspaces.png" width="640" /></a></div><div><br /></div><br /><br /><h3 style="text-align: left;">     Select a Key Space</h3><div>Select a keyspace from available keyspaces.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-IcGSud62MD0/T64b1rvihVI/AAAAAAAAA2s/Z_diR_UApRY/s1600/keyspaces.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="272" src="http://2.bp.blogspot.com/-IcGSud62MD0/T64b1rvihVI/AAAAAAAAA2s/Z_diR_UApRY/s640/keyspaces.png" width="640" /></a></div><div><br /></div><br /><h3 style="text-align: left;">     Select a Column Family to Explore Data.</h3><div>Click on Explore icon to view data in a Column Family.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-5KU2VE_jz7U/T64gOwnN_mI/AAAAAAAAA3I/fu1Z1e9-KH8/s1600/column-families.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="346" src="http://1.bp.blogspot.com/-5KU2VE_jz7U/T64gOwnN_mI/AAAAAAAAA3I/fu1Z1e9-KH8/s640/column-families.png" width="640" /></a></div><div><br /></div><h3 style="text-align: left;">     View Data on Column Family.</h3><div>This will display rows and columns in the Column Family. In a Row you can paginate through&nbsp;Columns. If you need to retrieve a key quickly enter your row ID and click explore row.</div><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-yWZfTSpJPrU/T64h3sQvsJI/AAAAAAAAA3Y/aMw34DUUuAE/s1600/cf-explorer.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="271" src="http://4.bp.blogspot.com/-yWZfTSpJPrU/T64h3sQvsJI/AAAAAAAAA3Y/aMw34DUUuAE/s640/cf-explorer.png" width="640" /></a></div><div><br /></div><br /><h3 style="text-align: left;">     View data on a Row</h3><div>Click on a row link to view data.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-_kjaf8AtGbY/T64i0nLb9qI/AAAAAAAAA3g/UesG2MyWKEM/s1600/row-explorer.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="252" src="http://3.bp.blogspot.com/-_kjaf8AtGbY/T64i0nLb9qI/AAAAAAAAA3g/UesG2MyWKEM/s640/row-explorer.png" width="640" /></a></div><div><br />You can search &nbsp;a Name or Value through search Box and will update the results as you type.<br /><br /></div><br />[1]&nbsp;<a href="http://wso2.org/library/knowledge-base/2012/04/deploy-cassandra-feature-wso2-carbon-product">http://wso2.org/library/knowledge-base/2012/04/deploy-cassandra-feature-wso2-carbon-product</a><br /><br />[2]&nbsp;<a href="https://www.dropbox.com/s/m00uodj1ymkpdzb/wso2carbon-4.0.0-SNAPSHOT.zip">https://www.dropbox.com/s/m00uodj1ymkpdzb/wso2carbon-4.0.0-SNAPSHOT.zip</a></div>
+</p>
+</body>
+<footer class="panel-footer navbar-fixed-bottom">
+<div class="container">
+	<p class="text-muted">Copyright Shelan Perera @ 2015</p>
+</div>
+</footer>
+<script src="http://shelan.org/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/flat-ui.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.js"></script>
+
+<script>
+var _gaq=[['_setAccount','UA-56325764-1'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</html>
+
+<div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "shelanblog";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "shelanblog";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
