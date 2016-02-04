@@ -35,11 +35,11 @@ Following is the presentation about the results we obtained.
 
 <h6>System level performance results of the experiments.</h6>
 
-[200GB workload] (shelan.org/flink-spark-batch-reports/terasort-200/report_cpu.html)
+[200GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-200/report_cpu.html)
 
-[400GB workload] (shelan.org/flink-spark-batch-reports/terasort-400/report_cpu.html)
+[400GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-400/report_cpu.html)
 
-[600GB workload] (shelan.org/flink-spark-batch-reports/terasort-600/report_cpu.html)
+[600GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-600/report_cpu.html)
 
 You can find the full report of the project [here](https://www.scribd.com/doc/297923938/Apache-Spark-vs-Apache-Flink-Reproducible-Experiments-on-cloud).
 
