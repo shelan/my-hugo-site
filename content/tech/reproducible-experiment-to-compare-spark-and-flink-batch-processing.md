@@ -5,11 +5,12 @@ title = "Reproducible Experiment to Compare Apache Spark and Apache Flink batch 
 
 +++
 
-How do you reproduce distributed experiments? 
-
-
-Have you ever experienced the pain of installing and configuring necessary 
+How do you reproduce distributed experiments? Have you ever experienced the pain of installing and configuring necessary 
 software to run a distributed experiment.
+
+<img src="/images/tired-of-writing.gif" alt="example-image" class="img-rounded img-responsive">
+
+
 
 [Karamel](http://karamel.io) comes to rescue you if you are struggling in that problem.
  
@@ -35,11 +36,11 @@ Following is the presentation about the results we obtained.
 
 <h6>System level performance results of the experiments.</h6>
 
-[200GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-200/report_cpu.html)
+[200GB workload] (/flink-spark-batch-reports/terasort-200/report_cpu.html)
 
-[400GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-400/report_cpu.html)
+[400GB workload] (/flink-spark-batch-reports/terasort-400/report_cpu.html)
 
-[600GB workload] (http://shelan.org/flink-spark-batch-reports/terasort-600/report_cpu.html)
+[600GB workload] (/flink-spark-batch-reports/terasort-600/report_cpu.html)
 
 You can find the full report of the project [here](https://www.scribd.com/doc/297923938/Apache-Spark-vs-Apache-Flink-Reproducible-Experiments-on-cloud).
 
