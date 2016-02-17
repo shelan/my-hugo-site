@@ -6,8 +6,8 @@ categories = ["life"]
 +++
 
 Steve Jobs once said that you cannot connect dots by looking backwards. That saying stays and will stay in my heart forever, remembering
-the impact of tiny little incidents and opportunities in my life. You will never know, the smallest opportunity that blinks
-before you might become in the future.
+the impact of tiny little incidents and opportunities in my life. You will never know what those tiny little opportunities today,
+ will provide you tomorrow. So stay awake and conscious.
 
 I have watched the following video " I see something in you" by Dhananjaya Hettiarachchi, who won the Intentional competition for
  public speaking. It reminds me of my potential to be someone more than I am. If you listen, may be.. may be.. you will realize
