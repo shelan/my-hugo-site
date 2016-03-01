@@ -1,8 +1,8 @@
 +++
 date = "2016-03-01T11:07:14+01:00"
 categories=["tech"]
-title = "Docker Multi Host Networking with Vagrant"
-tags = ["docker", "mutlihost","vagrant"]
+title = "Docker Multi Host Networking with Consul and Vagrant"
+tags = ["docker", "mutlihost","vagrant","consul"]
 +++
 
 <img src="/images/docker-network.jpg" alt="docker-network" class="img-rounded img-responsive">
