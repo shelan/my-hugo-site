@@ -1,6 +1,6 @@
 +++
 date = "2016-03-01T11:07:14+01:00"
-draft = true
+categories=["tech"]
 title = "Docker Multi Host Networking with Vagrant"
 tags = ["docker", "mutlihost","vagrant"]
 +++
