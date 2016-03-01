@@ -23,7 +23,7 @@ You can refer [docker networking](https://docs.docker.com/engine/userguide/netwo
 
 
 
-### docker Multi Host Networking
+### Docker Multi Host Networking
 
 Lets look at what docker proposes for multi-host networking. There are several ways to achieve the docker multi-host networking. In addition to basic network bridge, host and null you can use docker's overlay network to connect multiple hosts. In order to create an overlay network you need to have a key value store configured and setup. 
 
