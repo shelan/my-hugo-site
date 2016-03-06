@@ -19,4 +19,4 @@ paginate = 10
 	gravatarHash = "9bef677be3cd588e6427102018d35f27"
 	googleAnalytics = "UA-56325764-1"
 
-highlight = "monokai_sublime"
+highlight = "zenburn"
